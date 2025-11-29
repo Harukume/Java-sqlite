@@ -1,17 +1,14 @@
 package com.pwr.lab03.kayak.model;
 
-import java.sql.Date;
-import java.time.LocalDate;
-
 public class Offer {
     private int id;
-    private Date date;
+    private String date;
     private String location;
     private int maxPlaces;
     private int freePlaces;
 
     public Offer() {}
-    public Offer(int id,Date date, String location, int maxPlaces, int freePlaces) {
+    public Offer(int id,String date, String location, int maxPlaces, int freePlaces) {
         this.id = id;
         this.date = date;
         this.location = location;
@@ -24,9 +21,9 @@ public class Offer {
 
     public void setId(int id){ this.id=id;}
 
-    public Date getDate() { return date; }
+    public String getDate() { return date; }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

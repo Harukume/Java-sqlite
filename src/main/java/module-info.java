@@ -7,8 +7,6 @@ exports com.pwr.lab03.kayak.dao;
 
 exports com.pwr.lab03.kayak.service;
 
-exports com.pwr.lab03.kayak.controller;
-
 exports com.pwr.lab03.kayak.app;
 
 exports com.pwr.lab03.kayak.exception;

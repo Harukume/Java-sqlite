@@ -25,7 +25,7 @@ public class ClientService {
         try {
             return offerDAO.findAll();
         } catch (SQLException e) {
-            throw new DataException("Error fetching offers", e);
+            throw new DataException("Error fetching offers: " + e, e);
         }
     }
 

@@ -5,7 +5,7 @@ public class Task {
     private int organizerId;
     private int employeeId;
     private int offerId;
-    private String status; // otwarte, realizowane, zamknięte
+    private String status; // open, in_progress, closed
 
     public Task() {}
     public Task(int id, int organizerId, int employeeId, int offerId, String status) {

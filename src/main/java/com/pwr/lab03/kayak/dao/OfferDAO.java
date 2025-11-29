@@ -12,7 +12,7 @@ public class OfferDAO extends BaseDAO<Offer> {
     protected Offer map(ResultSet rs) throws SQLException {
         return new Offer(
                 rs.getInt("id"),
-                rs.getDate("date"),
+                rs.getString("date"),
                 rs.getString("location"),
                 rs.getInt("maxPlaces"),
                 rs.getInt("freePlaces")
@@ -45,7 +45,7 @@ public class OfferDAO extends BaseDAO<Offer> {
         try (Connection c = getConnection();
              PreparedStatement ps = c.prepareStatement(
                      "INSERT INTO Offer(date, location, maxPlaces, freePlaces) VALUES(?,?,?,?)")) {
-            ps.setDate(1, o.getDate());
+            ps.setString(1, o.getDate());
             ps.setString(2, o.getLocation());
             ps.setInt(3, o.getMaxPlaces());
             ps.setInt(4, o.getFreePlaces());

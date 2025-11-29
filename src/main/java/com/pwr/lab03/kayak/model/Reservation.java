@@ -6,7 +6,7 @@ public class Reservation {
     private int organizerId;
     private int offerId;
     private int numberOfSeats;
-    private String status; // założona, potwierdzona, realizowana, zrealizowana, odwołana
+    private String status; // created, confirmed, in_progress, completed, cancelled
     public Reservation() {}
 
     public Reservation(int id,int clientId, int offerId, int organizerId, int numberOfSeats, String status) {
