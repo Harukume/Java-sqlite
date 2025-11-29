@@ -20,6 +20,14 @@ public class ReservationDAO extends BaseDAO<Reservation> {
     }
 
 
+    public Reservation findById(int id) throws SQLException {
+        try(Connection c = getConnection();
+            PreparedStatement ps = c.prepareStatement("SELECT * FROM Reservation where id=?")) {
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            return rs.next() ? map(rs) : null;
+        }
+    }
     public List<Reservation> findByOffer(int offerId) throws SQLException {
         List<Reservation> list = new ArrayList<>();
         try (Connection c = getConnection();
@@ -30,6 +38,18 @@ public class ReservationDAO extends BaseDAO<Reservation> {
         }
         return list;
     }
+
+    public List<Reservation> findByClient(int clientId) throws SQLException {
+        List<Reservation> list = new ArrayList<>();
+        try (Connection c = getConnection();
+             PreparedStatement ps = c.prepareStatement("SELECT * FROM Reservation WHERE clientId=?")) {
+            ps.setInt(1, clientId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) list.add(map(rs));
+        }
+        return list;
+    }
+
 
 
     public void insert(Reservation r) throws SQLException {
