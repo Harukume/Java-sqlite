@@ -1,7 +1,7 @@
 //package com.pwr.lab03.kayak.service;
 //
 //import com.pwr.lab03.kayak.model.Organizer;
-//import com.pwr.lab03.kayak.repository.OrganizerRepository;
+//import com.pwr.lab03.kayak.dao.OrganizerRepository;
 //import org.springframework.stereotype.Service;
 //
 //import java.util.List;

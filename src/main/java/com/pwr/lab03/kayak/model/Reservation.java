@@ -3,15 +3,17 @@ package com.pwr.lab03.kayak.model;
 public class Reservation {
     private int id;
     private int clientId;
+    private int organizerId;
     private int offerId;
     private int numberOfSeats;
     private String status; // założona, potwierdzona, realizowana, zrealizowana, odwołana
-    private String createdAt;
     public Reservation() {}
 
-    public Reservation(int clientId, int offerId, int numberOfSeats, String status) {
+    public Reservation(int id,int clientId, int offerId, int organizerId, int numberOfSeats, String status) {
+        this.id = id;
         this.clientId = clientId;
         this.offerId = offerId;
+        this.organizerId = organizerId;
         this.numberOfSeats = numberOfSeats;
         this.status = status;
     }
@@ -40,12 +42,17 @@ public class Reservation {
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
 
-    public String getCreatedAt() { return createdAt; }
-    public void setCreatedAt(String createdAt) { this.createdAt = createdAt; }
-
     @Override
     public String toString() {
         return "Reservation{id=" + id + ", clientId=" + clientId + ", offerId=" + offerId +
                 ", numberOfSeats=" + numberOfSeats + ", status='" + status + "'}";
+    }
+
+    public int getOrganizerId() {
+        return organizerId;
+    }
+
+    public void setOrganizerId(int organizerId) {
+        this.organizerId = organizerId;
     }
 }

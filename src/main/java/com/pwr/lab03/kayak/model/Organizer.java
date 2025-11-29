@@ -5,10 +5,10 @@ public class Organizer {
     private String name;
 
     public Organizer() {}
-    public Organizer(String name) {
+    public Organizer(int id, String name) {
+        this.id = id;
         this.name = name;
     }
-
     // getters/setters
     public int getId() { return id; }
     public String getName() { return name; }

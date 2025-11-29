@@ -8,7 +8,8 @@ public class Task {
     private String status; // otwarte, realizowane, zamknięte
 
     public Task() {}
-    public Task(int organizerId, int employeeId, int offerId, String status) {
+    public Task(int id, int organizerId, int employeeId, int offerId, String status) {
+        this.id = id;
         this.organizerId = organizerId;
         this.employeeId = employeeId;
         this.offerId = offerId;

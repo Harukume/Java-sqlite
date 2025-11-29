@@ -1,7 +1,7 @@
 //package com.pwr.lab03.kayak.service;
 //
 //import com.pwr.lab03.kayak.model.Client;
-//import com.pwr.lab03.kayak.repository.ClientRepository;
+//import com.pwr.lab03.kayak.dao.ClientRepository;
 //
 //import java.util.List;
 //

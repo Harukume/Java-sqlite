@@ -5,7 +5,10 @@ public class Employee {
     private String name;
 
     public Employee() {}
-    public Employee(String name) { this.name = name; }
+    public Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     // getters/setters
     public int getId() { return id; }
