@@ -41,7 +41,7 @@ public class EmployeeApp {
                     case 3:
                         System.out.print("Task ID: ");
                         int taskId = Integer.parseInt(sc.nextLine());
-                        service.closeTask(taskId);
+                        service.updateTask(taskId, "closed");
                         System.out.println("Task closed.");
                         break;
                     case 0:

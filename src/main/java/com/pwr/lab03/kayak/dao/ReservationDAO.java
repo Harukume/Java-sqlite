@@ -19,7 +19,16 @@ public class ReservationDAO extends BaseDAO<Reservation> {
         );
     }
 
+    public List<Reservation> findAll() throws SQLException {
+        List<Reservation> list = new ArrayList<>();
+        try(Connection c = getConnection();
+            PreparedStatement ps = c.prepareStatement("SELECT * FROM Reservation")) {
+                ResultSet rs = ps.executeQuery();
+                while(rs.next()) list.add(map(rs));
 
+        }
+        return list;
+    }
     public Reservation findById(int id) throws SQLException {
         try(Connection c = getConnection();
             PreparedStatement ps = c.prepareStatement("SELECT * FROM Reservation where id=?")) {
@@ -82,4 +91,5 @@ public void delete(int id) throws SQLException {
         ps.executeUpdate();
     }
 }
+
 }

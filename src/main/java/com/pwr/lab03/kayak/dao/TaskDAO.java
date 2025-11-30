@@ -1,6 +1,9 @@
 package com.pwr.lab03.kayak.dao;
 
 
+import com.pwr.lab03.kayak.exception.DataException;
+import com.pwr.lab03.kayak.exception.ValidationException;
+import com.pwr.lab03.kayak.model.Offer;
 import com.pwr.lab03.kayak.model.Task;
 import java.sql.*;
 import java.util.*;
@@ -18,6 +21,26 @@ public class TaskDAO extends BaseDAO<Task> {
                 rs.getInt("offerId"),
                 rs.getString("status")
         );
+    }
+
+
+    public List<Task> findAll() throws SQLException {
+        List<Task> list = new ArrayList<>();
+        try (Connection c = getConnection();
+            PreparedStatement ps = c.prepareStatement("SELECT * FROM Task");
+            ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) list.add(map(rs));
+        }
+        return list;
+    }
+
+    public Task findById(int id) throws SQLException {
+        try (Connection c = getConnection();
+             PreparedStatement ps = c.prepareStatement("SELECT * FROM Task WHERE id=?")) {
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            return rs.next() ? map(rs) : null;
+        }
     }
 
 
@@ -62,4 +85,6 @@ public class TaskDAO extends BaseDAO<Task> {
             ps.executeUpdate();
         }
     }
+
+
 }

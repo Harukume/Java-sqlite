@@ -1,7 +1,8 @@
 module kayak {
 requires java.sql;
+    requires java.desktop;
 
-exports com.pwr.lab03.kayak.model;
+    exports com.pwr.lab03.kayak.model;
 
 exports com.pwr.lab03.kayak.dao;
 

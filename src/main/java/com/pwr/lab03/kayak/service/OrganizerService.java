@@ -40,6 +40,21 @@ public class OrganizerService {
         }
     }
 
+    public void cancelReservation(int reservationId) throws DataException {
+        try {
+            Reservation r = reservationDAO.findById(reservationId);
+
+            if (!r.getStatus().equals("created") && !r.getStatus().equals("confirmed"))
+                throw new ValidationException("Cannot cancel now");
+
+            r.setStatus("cancelled");
+            reservationDAO.updateStatus( r.getId(), r.getStatus());
+
+        } catch (SQLException e) {
+            throw new DataException("Error cancelling reservation: " + e.getMessage());
+        }
+    }
+
 
     public void generateTask(int organizerId, int employeeId, int offerId) throws DataException {
         try {

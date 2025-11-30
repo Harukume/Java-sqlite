@@ -27,7 +27,6 @@ public class DbManager {
 
     public void initIfNeeded() {
         try (Connection c = getConnection()) {
-// execute init.sql from resources
             InputStream in = getClass().getClassLoader().getResourceAsStream("init.sql");
             if (in == null) return;
             String sql = new Scanner(in, StandardCharsets.UTF_8).useDelimiter("\\A").next();
