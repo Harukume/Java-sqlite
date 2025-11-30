@@ -1,4 +1,4 @@
-package com.pwr.lab03.kayak.util;
+package com.pwr.lab03.kayak.utils;
 
 import com.pwr.lab03.kayak.model.Offer;
 import com.pwr.lab03.kayak.model.Reservation;

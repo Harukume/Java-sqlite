@@ -2,7 +2,7 @@ package com.pwr.lab03.kayak.gui;
 
 import com.pwr.lab03.kayak.model.Task;
 import com.pwr.lab03.kayak.service.EmployeeService;
-import com.pwr.lab03.kayak.util.TimeSimulator;
+import com.pwr.lab03.kayak.utils.TimeSimulator;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

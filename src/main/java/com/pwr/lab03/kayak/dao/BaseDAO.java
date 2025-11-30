@@ -1,5 +1,4 @@
 package com.pwr.lab03.kayak.dao;
-import com.pwr.lab03.kayak.util.DbManager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

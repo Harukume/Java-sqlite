@@ -1,4 +1,4 @@
-package com.pwr.lab03.kayak.util;
+package com.pwr.lab03.kayak.utils;
 
 import java.time.LocalDate;
 

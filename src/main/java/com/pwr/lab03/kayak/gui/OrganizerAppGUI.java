@@ -5,13 +5,11 @@ import com.pwr.lab03.kayak.model.Reservation;
 import com.pwr.lab03.kayak.service.OfferService;
 import com.pwr.lab03.kayak.service.ReservationService;
 import com.pwr.lab03.kayak.service.OrganizerService;
-import com.pwr.lab03.kayak.util.TimeListener;
-import com.pwr.lab03.kayak.util.TimeSimulator;
+import com.pwr.lab03.kayak.utils.TimeSimulator;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.time.LocalDate;
 import java.util.List;
 
 public class OrganizerAppGUI extends JFrame {

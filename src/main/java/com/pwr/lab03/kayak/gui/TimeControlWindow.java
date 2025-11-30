@@ -1,6 +1,6 @@
 package com.pwr.lab03.kayak.gui;
 
-import com.pwr.lab03.kayak.util.TimeSimulator;
+import com.pwr.lab03.kayak.utils.TimeSimulator;
 
 import javax.swing.*;
 import java.awt.*;

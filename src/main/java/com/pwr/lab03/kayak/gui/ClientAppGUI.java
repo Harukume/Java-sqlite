@@ -5,7 +5,7 @@ import com.pwr.lab03.kayak.exception.ValidationException;
 import com.pwr.lab03.kayak.model.Offer;
 import com.pwr.lab03.kayak.service.ClientService;
 import com.pwr.lab03.kayak.service.OfferService;
-import com.pwr.lab03.kayak.util.TimeSimulator;
+import com.pwr.lab03.kayak.utils.TimeSimulator;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
